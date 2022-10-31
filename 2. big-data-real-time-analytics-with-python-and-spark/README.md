@@ -1,9 +1,10 @@
 # Real-Time Big Data Analysis with Python and Spark
 
-:pushpin: **The objective of this course is** to bring a batch and real-time data analysis techniques with two of the main tools used by Data Scientists: Python Language and Apache Spark.
+:pushpin: **Objective:**
+To bring a batch and real-time data analysis techniques with two of the main tools used by Data Scientists: Python Language and Apache Spark.
 
-__
-# Index
+
+## Index
 
 - [x] Data Manipulation in Python with NumPy :heavy_check_mark:
 - [x] Data Manipulation in Python with Pandas :heavy_check_mark:
