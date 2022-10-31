@@ -3,12 +3,12 @@
 :pushpin: The objective of this course is to bring you batch and real-time data analysis techniques with two of the main tools used by Data Scientists: Python Language and Apache Spark.
 
 :construction:
-- [x] Data Manipulation in Python with NumPy
-- [x] Data Manipulation in Python with Pandas
-- [x] Exploratory Data Analysis
-- [x] Feature Engineering
-- [x] Data Preprocessing
-- [x] Statistical Data Analysis Part1
+- [x] Data Manipulation in Python with NumPy :heavy_check_mark:
+- [x] Data Manipulation in Python with Pandas :heavy_check_mark:
+- [x] Exploratory Data Analysis :heavy_check_mark:
+- [x] Feature Engineering :heavy_check_mark:
+- [x] Data Preprocessing :heavy_check_mark:
+- [x] Statistical Data Analysis Part1 :heavy_check_mark:
 - [ ] Statistical Data Analysis Part2
 - [ ] Machine Learning in Python - Part 1
 - [ ] Machine Learning in Python - Part 2

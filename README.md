@@ -1,4 +1,5 @@
-# Data Scientist Education in [Data Science Academy](https://www.datascienceacademy.com.br/bundle/formacao-cientista-de-dados)
+# Data Scientist Education
+### The course is in Portuguese and online, provided by Data Science Academy. [Data Science Academy](https://www.datascienceacademy.com.br/bundle/formacao-cientista-de-dados)
 
 - [ ] 1. Big Data Analytics with R and Microsoft Azure Machine Learning (108h)
 - [x] 2. Real-Time Big Data Analysis with Python and Spark (72h)
