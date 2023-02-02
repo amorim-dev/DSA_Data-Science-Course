@@ -1,4 +1,4 @@
-# Real-Time Big Data Analysis with Python and Spark
+# Big Data Real-Time Analytics with Python and Spark
 
 ## :pushpin: Objective
 To bring a batch and real-time data analysis techniques with two of the main tools used by Data Scientists: Python Language and Apache Spark.
