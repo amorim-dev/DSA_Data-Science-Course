@@ -1,7 +1,7 @@
 # Basic Data Types in R
 
 # Set word directory
-setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/3.BigData_RAzure/Ch2")
+setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/1.BigData_RAzure/Ch2")
 getwd()
 
 # NUMERIC - All the numbers created in R are numeric mode

@@ -1,7 +1,7 @@
 # First steps with R Language
 
 # Setting up working directory
-setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/3.BigData_RAzure/Ch2")
+setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/1.BigData_RAzure/Ch2")
 getwd()
 
 # Session information

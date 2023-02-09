@@ -1,7 +1,7 @@
 # Advanced data types in R
 
 # Set word directory
-setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/3.BigData_RAzure/Ch2")
+setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/1.BigData_RAzure/Ch2")
 getwd()
 
 # VECTOR: It has only one dimension and 1 data type

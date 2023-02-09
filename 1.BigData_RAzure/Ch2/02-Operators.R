@@ -4,7 +4,7 @@
 # https://support.posit.co/hc/en-us/articles/200532197-Character-Encoding
 
 # Configuring work diretory
-setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/3.BigData_RAzure/Ch02")
+setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/1.BigData_RAzure/Ch2")
 getwd()
 
 # Basic Operators

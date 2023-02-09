@@ -2,7 +2,7 @@
 # Vector has only one dimension and one data type
 
 # Set WD
-setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/3.BigData_RAzure/Ch2")
+setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/1.BigData_RAzure/Ch2")
 getwd()
 
 # String vector
