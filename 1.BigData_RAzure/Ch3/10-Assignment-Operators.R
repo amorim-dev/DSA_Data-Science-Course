@@ -20,5 +20,9 @@ typeof(vec2)
 mean(x = 1:10)
 x # X does not exist anymore
 
-mean(x <- 1:10)
+mean(x <- 1:10) # Its better to use
 x
+
+
+lista1 <- list(a=(1:20), b=(45:77))
+sapply(lista1, sum)

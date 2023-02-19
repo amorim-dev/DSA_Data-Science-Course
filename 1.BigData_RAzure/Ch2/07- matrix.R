@@ -69,6 +69,7 @@ mat1
 mat2 <- matrix(c(6,7,8,9), nr = 2)
 mat2
 mat1 * mat2
+mat1 %*% mat2
 mat1 / mat2
 mat1 + mat2
 mat1 - mat2

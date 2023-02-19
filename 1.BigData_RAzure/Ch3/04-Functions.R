@@ -10,6 +10,8 @@ getwd()
 args(sample)
 args(mean)
 args(sd) # Standard deviation
+args(factor)
+args(round)
 
 
 # Built-in fuctions
