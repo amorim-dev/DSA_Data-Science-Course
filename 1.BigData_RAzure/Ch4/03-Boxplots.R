@@ -1,31 +1,30 @@
 # Boxplots 
 
-# Obs: Caso tenha problemas com a acentuação, consulte este link:
+# Note: If you have problems with accentuation, please refer to this link:
 # https://support.rstudio.com/hc/en-us/articles/200532197-Character-Encoding
 
-# Configurando o diretório de trabalho
-# Coloque entre aspas o diretório de trabalho que você está usando no seu computador
-# Não use diretórios com espaço no nome
-setwd("C:/FCD/BigDataRAzure/Cap04")
+# Setting up the working directory
+setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/1.BigData_RAzure/Ch4")
 getwd()
 
 ?boxplot
 ?sleep
 
-# Permite utilizar as colunas sem especificar o nome do dataset
+# Allows you to use the columns without specifying the dataset name
 attach(sleep)
 View(sleep)
 
-# Construção do boxplot
+# Boxplot construction
 sleepboxplot = boxplot(data = sleep, extra ~ group,
-                       main = "Duração do Sono",
-                       col.main = "red", ylab = "Horas", xlab = "Droga")
+                       main = "Sleep Duration",
+                       col.main = "red", ylab = "Hours", xlab = "Drug")
 
-# Cálculo da média
-medias = by(extra, group, mean)
+# Average calculation
+avg = by(extra, group, mean)
 
-# Adiciona a média ao gráfico
-points(medias, col = "red")
+# Adds the mean to the graph 
+# We can create layer by layer, add points and lines after create the basic graph
+points(avg, col = "red")
 
 
 # Boxplot horizontal

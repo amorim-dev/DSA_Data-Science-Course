@@ -1,42 +1,40 @@
-# Histogramas 
+# Histograms 
 
-# Obs: Caso tenha problemas com a acentuação, consulte este link:
+# Note: If you have problems with accentuation, please refer to this link:
 # https://support.rstudio.com/hc/en-us/articles/200532197-Character-Encoding
 
-# Configurando o diretório de trabalho
-# Coloque entre aspas o diretório de trabalho que você está usando no seu computador
-# Não use diretórios com espaço no nome
-setwd("C:/FCD/BigDataRAzure/Cap04")
+# Setting up the working directory
+setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/1.BigData_RAzure/Ch4")
 getwd()
 
-# Definindo os dados
+# Setting the Data
 ?cars
 View(cars)
-dados = cars$speed
+dataset = cars$speed
 
-# Construindo um histograma
+# Building a histogram
 ?hist
-hist(dados)
+hist(dataset)
 
 
-# Conforme consta no help, o parâmetro breaks pode ser um dos itens abaixo:
-# Um vetor para os pontos de quebra entre as células do histograma
-# Uma função para calcular o vetor de breakpoints
-# Um único número que representa o número de células para o histograma
-# Uma cadeia de caracteres que nomeia um algoritmo para calcular o número de células 
-# Uma função para calcular o número de células.
-hist(dados, breaks = 10, main = "Histograma das Velocidades")
-hist(dados, labels = T, breaks = c(0,5,10,20,30), main = "Histograma das Velocidades")
-hist(dados, labels = T, breaks = 10, main = "Histograma das Velocidades")
-hist(dados, labels = T, ylim = c(0,10), breaks = 10, main = "Histograma das Velocidades")
+# As stated in the help, the breaks parameter can be any of the following:
+# A vector for the breakpoints between the cells in the histogram
+# A function to calculate the vector of breakpoints
+# A single number that represents the number of cells for the histogram
+# A string that names an algorithm to calculate the number of cells 
+# A function to calculate the number of cells
+hist(dataset, breaks = 10, main = "Histogram of Speeds")
+hist(dataset, labels = T, breaks = c(0,5,10,20,30), main = "Histogram of Speeds")
+hist(dataset, labels = T, breaks = 10, main = "Histogram of Speeds")
+hist(dataset, labels = T, ylim = c(0,10), breaks = 10, main = "Histogram of Speeds")
 
 
-# Adicionando linhas ao histograma
-grafico <- hist(dados, breaks = 10, main = "Histograma das Velocidades")
+# Adding lines to the histogram
+grafico <- hist(dataset, breaks = 10, main = "Histogram of Speeds")
 
-xaxis = seq(min(dados), max(dados), length = 10)
-yaxis = dnorm(xaxis, mean = mean(dados), sd = sd(dados))
-yaxis = yaxis*diff(grafico$mids)*length(dados)
+xaxis = seq(min(dataset), max(dataset), length = 10)
+yaxis = dnorm(xaxis, mean = mean(dataset), sd = sd(dataset)) # Calculating the normal distribution
+yaxis = yaxis*diff(grafico$mids)*length(dataset) # Different between x and y axis
 
 lines(xaxis, yaxis, col = "red")
 

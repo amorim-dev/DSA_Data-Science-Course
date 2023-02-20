@@ -1,41 +1,43 @@
-# Gráficos em R - Base Plotting System 
+# Charts in R - Base Plotting System 
 
-# Obs: Caso tenha problemas com a acentuação, consulte este link:
+# Note: If you have problems with accentuation, please refer to this link:
 # https://support.rstudio.com/hc/en-us/articles/200532197-Character-Encoding
 
-# Configurando o diretório de trabalho
-# Coloque entre aspas o diretório de trabalho que você está usando no seu computador
-# Não use diretórios com espaço no nome
-setwd("C:/FCD/BigDataRAzure/Cap04")
+# Setting up the working directory
+# Enclose the working directory you are using on your computer in quotes
+# Do not use directories with spaces in the name
+setwd("/home/bia/Code/GITHUB_DSA/DSA_Data-Science-Course/1.BigData_RAzure/Ch4")
 getwd()
 
-# Lista de pacotes base carregados
+# List of loaded base packages
+# Are the two packages that contain the base plotting system
 search()
 
 
-# Demo
+# Demo (Demonstration of how to use a package)
+# Does not work with all package but with many
 demo("graphics")
 
 
-# Plot Básico
+# Basic Plot
 x = 5:7
 y = 8:10
 plot(x,y)
 ?plot
 
-altura <- c(145, 167, 176, 123, 150)
-largura <- c(51, 63, 64, 40, 55)
+height <- c(145, 167, 176, 123, 150)
+width <- c(51, 63, 64, 40, 55)
 
-plot(altura, largura)
+plot(height, width)
 
 
-# Plotando um Dataframe
+# Plotting a Dataframe
 ?lynx
 plot(lynx)
-plot(lynx, ylab = "Plots com Dataframes", xlab = "")
-plot(lynx, ylab = "Plots com Dataframes", xlab = "Observações")
-plot(lynx, main = "Plots com Dataframes", col = 'red')
-plot(lynx, main = "Plots com Dataframes", col = 'red', col.main = 52, cex.main = 1.5)
+plot(lynx, ylab = "Plots with Dataframes", xlab = "")
+plot(lynx, ylab = "Plots with Dataframes", xlab = "Observations")
+plot(lynx, main = "Plots with Dataframes", col = 'red')
+plot(lynx, main = "Plots with Dataframes", col = 'red', col.main = 52, cex.main = 1.5)
 
 library(datasets)
 hist(warpbreaks$breaks)
@@ -45,28 +47,28 @@ transform(airquality, Month = factor(Month))
 boxplot(Ozone ~ Month, airquality, xlab = "Month", ylab = "Ozone (ppb)")
 
 
-# Especificando os parâmetros
+# Specifying the parameters
 
-# col - cor do plot
-# lty - tipo de linha
-# lwd - largura de linha
-# pch - símbolo no plot
-# xlab - label do eixo x
-# ylab - label do eixo y
-# las - como os labels dos eixos são orientados
+# col - color of the plot
+# lty - line type
+# lwd - line width
+# pch - symbol on plot
+# xlab - x-axis label
+# ylab - y-axis label
+# las - how axis labels are oriented
 # bg - background color
-# mfrow - número de plots por linha
-# mfcool - número de plots por coluna
+# mfrow - number of plots per line
+# mfcool - number of plots per column
 
-# Funções Básicas de Plot
+# Basic Plot Functions
 
 # plot() - scatterplots
-# lines() -  adiciona linhas ao gráfico
-# points() - adiciona pontos ao gráfico
-# text() - adiciona label ao gráfico
-# title() - adiciona título ao gráfico
+# lines() - adds lines to a graph
+# points() - adds points to a graph
+# text() - add label to graph
+# title() - adds title to chart
 
-# Parâmetros dos Gráficos
+# Graph Parameters
 ?par
 par()
 par('pch')
@@ -83,33 +85,33 @@ plot(1:8, las = 3, xlab = "xlab", ylab = "ylab", main = "LAS = 3")
 legend("topright", pch = 1, col = c("blue", "red"), legend = c("Var1","Var2"))
 par(mfrow = c(1,1))
 
-# Cores disponíveis
+# Available colors
 colors()
 
 
-# Salvando os gráficos
+# Saving Graphics in png or pdf
 
 # png
-png("Grafico1.png", width = 500, height = 500, res = 72)
+png("Graph1.png", width = 500, height = 500, res = 72)
 
 plot(iris$Sepal.Length, iris$Petal.Length,
      col = iris$Species,
-     main = "Gráfico gerado a partir do Iris")
+     main = "Graph generated from Iris")
 
 dev.off()
 
 
 # pdf
-pdf("Grafico2.pdf")
+pdf("Graph2.pdf")
 
 plot(iris$Sepal.Length, iris$Petal.Length,
      col = iris$Species,
-     main = "Gráfico gerado a partir do Iris")
+     main = "Graph generated from Iris")
 
 dev.off()
 
 
-# Estendendo as funções do plot
+# Extending the plot functions
 install.packages('plotrix')
 library(plotrix)
 ?plotrix
@@ -135,7 +137,7 @@ plot(lynx, type="s", main="Type s")
 plot(lynx, type="n", main="Type n")
 
 
-# Dois plots juntos
+# Two plots together
 par(mar=c(4,3,3,3), col.axis="black")
 
 plot(cars$speed, type="s", col="red", bty="n", xlab="Cars ID", ylab="")
@@ -149,20 +151,21 @@ text(37, 18, "Distância", cex=0.85, col="darkblue")
 title(main="Velocidade x Distância")
 
 
-# Plots a partir de datasets
+# Plots from datasets
 df <- read.csv('pibpercap.csv', stringsAsFactors = F)
 df_1982 <- subset(df, ano == 1982)
 plot(expectativa ~ pibpercap, data = df_1982, log = "x")
 View(df)
 
-# Nomes paar as colunas
+# Names for the columns
 mycol <- c(Asia = "tomato", Europe = "chocolate4", Africa = "dodgerblue2", 
            Americas = "darkgoldenrod1", Oceania = "green4")
 
 # Plot
 plot(expectativa ~ pibpercap, data = df_1982, log = "x", col = mycol[continente])
 
-# Função para a escala
+# Function for the scale
+# You can use min and max to adjust to a precise scale 
 mycex <- function(var, r, f = sqrt){
   x = f(var)
   x_scaled = (x - min(x))/(max(x) - min(x))
